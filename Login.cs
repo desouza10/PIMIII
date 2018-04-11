@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +49,9 @@ namespace RentCar_Project.Login
             else
             {
                 MessageBox.Show("Acesso ao Sistema!", "Acesso Autorizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frm_PainelAtendente Atendente = new frm_PainelAtendente();
+                Atendente.ShowDialog();
+                this.Close();
             }
                    
         }
@@ -56,6 +59,11 @@ namespace RentCar_Project.Login
         private void btn_teste_Click(object sender, EventArgs e)
         {
             conexao.conectarBanco();
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

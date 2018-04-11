@@ -1,3 +1,4 @@
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,10 @@ namespace RentCar_Project
 {
     class Conexao
     {
+        public string strCon = "Data Source=GUILHERME;Initial Catalog=PIMIII;Integrated Security=True;";
         public SqlConnection conectarBanco()
         {
-            string strCon = "Data Source=GUILHERME;Initial Catalog=PIMIII;Integrated Security=True";
+           
             SqlConnection con = new SqlConnection(strCon);
 
             try
